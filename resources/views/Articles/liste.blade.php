@@ -20,16 +20,22 @@
             </div>   
         @endif
     
-            
             <div class="row">
               <div class="row">
                 @foreach($articles as $article)
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
+                      
                         <img src="{{asset ($article->ImageArticle)}}" class="card-img-top" alt="article one">
                         <div class="card-body">
                             <h5 class="card-title">{{$article->TitreArticle}}</h5>
-                            <p class="card-text">{{$article->DescriptionArticle}} </p>
+                            <p class="card-text">{{$article->DescriptionArticle}} </p> 
+                            <p class="card-text" style="color: green"><u><strong>Publié le</strong></u> : {{$article->PublicationDate}} </p>
+                                  <a href="#">Voir details</a> 
+
+                            
+                            <hr>
+                            
                             {{-- <a href="#" class="btn btn-primary">Voir plus</a> --}}
                             <a href="modifier_article/{{$article->id}}" class="btn btn-warning">Modifier</a>
                             <a href="supprimer_article/{{$article->id}}" class="btn btn-danger">Supprimer</a>

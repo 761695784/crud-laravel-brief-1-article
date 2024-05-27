@@ -8,9 +8,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/liste', [ ArticlesController:: class,'liste' ] 
-   
-);
+Route::get('/liste', [ ArticlesController:: class,'liste' ]);
 
 Route::get('/ajouter', function () {
     return view('Articles.ajouter');
@@ -25,3 +23,6 @@ Route::POST('/modifier/traitement', [ArticlesController::class, 'modifier_Articl
 
 
 Route::get('/supprimer_article/{id}', [ArticlesController::class, 'supprimer_article']);
+
+
+Route:: get('Articles/{id}',[ArticlesController::class, 'afficher_details']);
