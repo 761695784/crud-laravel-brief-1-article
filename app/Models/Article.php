@@ -12,5 +12,6 @@ class Article extends Model
         'TitreArticle',
         'DescriptionArticle',
         'PublicationDate',
+        'statut',
     ];
 }

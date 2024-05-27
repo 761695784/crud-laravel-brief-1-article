@@ -45,6 +45,11 @@
             <input type="date" class="form-control" name="PublicationDate" >
           </div>
 
+          <div class="mb-3">
+            <input type="checkbox" class="form-check-input" name="statut">
+            <label for="statut" class="form-check-label">A la une</label>
+        </div>
+
           
           <button type="submit" class="btn btn-primary">Ajouter</button>
           <a href="/liste" class="btn btn-danger">Revenir a la liste des etudiants</a>

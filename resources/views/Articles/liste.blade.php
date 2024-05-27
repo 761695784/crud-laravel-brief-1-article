@@ -31,7 +31,13 @@
                             <h5 class="card-title">{{$article->TitreArticle}}</h5>
                             <p class="card-text">{{$article->DescriptionArticle}} </p> 
                             <p class="card-text" style="color: green"><u><strong>Publié le</strong></u> : {{$article->PublicationDate}} </p>
-                                  <a href="#">Voir details</a> 
+                            @if($article->statut)
+                            <span class="badge bg-success">À la une</span>
+                        @endif   
+                            
+                            
+                            
+                            <a href="#">Voir details</a> 
 
                             
                             <hr>

@@ -23,6 +23,7 @@ public function ajouter_Articles_traitement(Request $request){
         'TitreArticle' =>'required',
         'DescriptionArticle' =>'required',
         'PublicationDate' =>'required|date',
+        'statut' =>'nullable',
     ]);
 
     $article = new Article();
@@ -30,6 +31,7 @@ public function ajouter_Articles_traitement(Request $request){
     $article->TitreArticle = $request->TitreArticle;
     $article->DescriptionArticle = $request->DescriptionArticle;
     $article->PublicationDate = $request->PublicationDate;
+    $article->statut = $request->has('statut');
     $article->save();
 
     return redirect('/ajouter')->with('status', 'article ajouté avec succès.');
@@ -48,6 +50,7 @@ public function ajouter_Articles_traitement(Request $request){
             'TitreArticle' =>'required',
             'DescriptionArticle' =>'required',
             'PublicationDate' =>'required|date',
+            'statut' =>'nullable',
         ]);
     
         $article = Article ::find($request->id);
@@ -55,6 +58,7 @@ public function ajouter_Articles_traitement(Request $request){
         $article->TitreArticle = $request->TitreArticle;
         $article->DescriptionArticle = $request->DescriptionArticle;
         $article->PublicationDate = $request->PublicationDate;
+        $article->statut = $request->statut;
         $article->update();
 
         return redirect('/liste')->with('status', 'article modifié avec succès.');
