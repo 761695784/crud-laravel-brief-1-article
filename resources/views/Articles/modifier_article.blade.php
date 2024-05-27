@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container mt-5">
-        <h1 class="text-center">Ajouter un article</h1>
+        <h1 class="text-center">Modifier un article</h1>
           
         @if (session('status'))
         <div class="alert alert-success">
@@ -25,21 +25,25 @@
       </ul>
 
 
-        <form action="/ajouter/traitement" method="POST">
+        <form action="/modifier/traitement" method="POST">
             @csrf
-          <div class="mb-3">
+         
+         <input type="text" name="id" style="display: none;" value="{{ $articles->id }}">
+         
+         
+            <div class="mb-3">
             <label for="ImageArticle" class="form-label">Image de l'article</label>
-            <input class="form-control" type="string" name="ImageArticle"  >
+            <input class="form-control" type="string" name="ImageArticle" value="{{$articles->ImageArticle}}" >
           </div>
           <div class="mb-3">
             <label for="TitreArticle" class="form-label">Titre de l'article</label>
-            <input type="text" class="form-control" name="TitreArticle" placeholder="Entrez le titre de l'article">
+            <input type="text" class="form-control" name="TitreArticle" placeholder="Entrez le titre de l'article" value="{{$articles->TitreArticle}}">
           </div>
           <div class="mb-3">
             <label for="DescriptionArticle" class="form-label">Description de l'article</label>
-            <textarea class="form-control"  name="DescriptionArticle" rows="3" placeholder="Entrez la description de l'article"></textarea>
+            <textarea class="form-control" name="DescriptionArticle" rows="3" placeholder="Entrez la description de l'article" value="{{$articles->DescriptionArticle}}"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Ajouter</button>
+          <button type="submit" class="btn btn-primary">Modifier</button>
           <a href="/liste" class="btn btn-danger">Revenir a la liste des etudiants</a>
         </form>
       
