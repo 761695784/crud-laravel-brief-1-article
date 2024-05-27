@@ -41,7 +41,7 @@
           </div>
           <div class="mb-3">
             <label for="DescriptionArticle" class="form-label">Description de l'article</label>
-            <textarea class="form-control" name="DescriptionArticle" rows="3" placeholder="Entrez la description de l'article" value="{{$articles->DescriptionArticle}}"></textarea>
+            <textarea class="form-control" name="DescriptionArticle" rows="3" placeholder="Entrez la description de l'article">{{$articles->DescriptionArticle}} </textarea>
           </div>
           <button type="submit" class="btn btn-primary">Modifier</button>
           <a href="/liste" class="btn btn-danger">Revenir a la liste des etudiants</a>
