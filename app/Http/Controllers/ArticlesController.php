@@ -30,7 +30,7 @@ public function ajouter_Articles_traitement(Request $request){
     $article = new Article();
     $article->ImageArticle = $request->ImageArticle;
     $article->TitreArticle = $request->TitreArticle;
-    $article->DescriptionArticle = $request->TitreArticle;
+    $article->DescriptionArticle = $request->DescriptionArticle;
     $article->save();
 
     return redirect('/ajouter')->with('status', 'article ajouté avec succès.');
@@ -54,7 +54,7 @@ public function ajouter_Articles_traitement(Request $request){
         $article = Article ::find($request->id);
         $article->ImageArticle = $request->ImageArticle;
         $article->TitreArticle = $request->TitreArticle;
-        $article->DescriptionArticle = $request->TitreArticle;
+        $article->DescriptionArticle = $request->DescriptionArticle;
         $article->update();
 
         return redirect('/liste')->with('status', 'article modifié avec succès.');
