@@ -22,3 +22,6 @@ Route::POST('/ajouter/traitement', [ArticlesController::class, 'ajouter_Articles
 Route::get('/modifier_article/{id}', [ArticlesController::class, 'modifier_article']);
 
 Route::POST('/modifier/traitement', [ArticlesController::class, 'modifier_Articles_traitement']);
+
+
+Route::get('/supprimer_article/{id}', [ArticlesController::class, 'supprimer_article']);

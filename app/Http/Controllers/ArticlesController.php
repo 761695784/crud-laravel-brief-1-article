@@ -59,8 +59,13 @@ public function ajouter_Articles_traitement(Request $request){
 
         return redirect('/liste')->with('status', 'article modifié avec succès.');
 
-
-
+    }
+    
+    public function supprimer_Article($id){
+        $articles = Article::find($id);
+        $articles->delete();
+        return redirect('/liste')->with('status', 'article supprimé avec succès.');
+         
     }
 
 

@@ -32,7 +32,7 @@
                             <p class="card-text">{{$article->DescriptionArticle}} </p>
                             {{-- <a href="#" class="btn btn-primary">Voir plus</a> --}}
                             <a href="modifier_article/{{$article->id}}" class="btn btn-warning">Modifier</a>
-                            <a href="#" class="btn btn-danger">Supprimer</a>
+                            <a href="supprimer_article/{{$article->id}}" class="btn btn-danger">Supprimer</a>
                         </div>
                     </div>
                 </div>
