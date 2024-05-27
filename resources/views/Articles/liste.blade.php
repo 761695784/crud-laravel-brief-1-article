@@ -15,17 +15,29 @@
             <h1>Hello, world!</h1> <hr>
             <a href="/ajouter" class="btn btn-primary">Ajouter un article</a><hr>
             
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('image/businessman-student-working-from-home-while-being-isolated-keep-quarantine-coronavirus-covid-19.jpg') }}" class="card-img-top" alt="article one">
-
-                <div class="card-body">
-                  <h5 class="card-title">accessoire informatique</h5>
-                  <p class="card-text">Découvrez notre nouvelle gamme d'accessoires informatiques : claviers ergonomiques, souris précises, casques immersifs, et stations d'accueil. Améliorez confort et productivité avec élégance.</p>
-                  <a href="#" class="btn btn-primary">Voir plus</a>
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem;">
+                    <img src="{{ asset('image/businessman-student-working-from-home-while-being-isolated-keep-quarantine-coronavirus-covid-19.jpg') }}" class="card-img-top" alt="article one">
+                    <div class="card-body">
+                      <h5 class="card-title">Accessoire informatique</h5>
+                      <p class="card-text">Découvrez notre nouvelle gamme d'accessoires informatiques : claviers ergonomiques, souris précises, casques immersifs, et stations d'accueil. Améliorez confort et productivité avec élégance.</p>
+                      <a href="#" class="btn btn-primary">Voir plus</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-
+        
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem;">
+                    <img src="{{ asset('image/businessman-student-working-from-home-while-being-isolated-keep-quarantine-coronavirus-covid-19.jpg') }}" class="card-img-top" alt="article one">
+                    <div class="card-body">
+                      <h5 class="card-title">Accessoire informatique</h5>
+                      <p class="card-text">Découvrez notre nouvelle gamme d'accessoires informatiques : claviers ergonomiques, souris précises, casques immersifs, et stations d'accueil. Améliorez confort et productivité avec élégance.</p>
+                      <a href="#" class="btn btn-primary">Voir plus</a>
+                    </div>
+                  </div>
+                </div>
+        
 
 
             
