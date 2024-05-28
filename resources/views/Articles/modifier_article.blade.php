@@ -55,7 +55,7 @@
         </div>
 
           <button type="submit" class="btn btn-primary">Modifier</button>
-          <a href="/liste" class="btn btn-danger">Revenir a la liste des etudiants</a>
+          <a href="/liste" class="btn btn-danger">Revenir a la liste des articles</a>
         </form>
       
       </div>
