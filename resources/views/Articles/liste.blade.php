@@ -32,14 +32,9 @@
                             <p class="card-text">{{$article->DescriptionArticle}} </p> 
                             <p class="card-text" style="color: green"><u><strong>Publié le</strong></u> : {{$article->PublicationDate}} </p>
                             @if($article->statut)
-                            <span class="badge bg-success">À la une</span>
-                        @endif   
-                            
-                            
-                            
-                            <a href="#">Voir details</a> 
-
-                            
+                            <span class="badge bg-success">À la une</span><hr>
+                        @endif        
+                        <a href="{{ route('details', $article->id) }}" class="btn btn-info">Voir plus</a>                           
                             <hr>
                             
                             {{-- <a href="#" class="btn btn-primary">Voir plus</a> --}}

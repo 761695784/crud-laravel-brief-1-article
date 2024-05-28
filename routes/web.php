@@ -25,4 +25,5 @@ Route::POST('/modifier/traitement', [ArticlesController::class, 'modifier_Articl
 Route::get('/supprimer_article/{id}', [ArticlesController::class, 'supprimer_article']);
 
 
-Route:: get('Articles/{id}',[ArticlesController::class, 'afficher_details']);
+
+Route::get('/details/{id}', [ArticlesController::class, 'details'])->name('details');

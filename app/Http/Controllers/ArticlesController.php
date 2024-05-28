@@ -58,7 +58,7 @@ public function ajouter_Articles_traitement(Request $request){
         $article->TitreArticle = $request->TitreArticle;
         $article->DescriptionArticle = $request->DescriptionArticle;
         $article->PublicationDate = $request->PublicationDate;
-        $article->statut = $request->statut;
+        $article->statut = $request->has('statut');
         $article->update();
 
         return redirect('/liste')->with('status', 'article modifié avec succès.');
@@ -69,17 +69,12 @@ public function ajouter_Articles_traitement(Request $request){
         $articles->delete();
         return redirect('/liste')->with('status', 'article supprimé avec succès.');     
     }
-       public function afficher_details($id)
+    public function details($id)
     {
-        $articles = Article::find($id);
-
-        // if (!$articles) {
-        //     return redirect('/liste')->with('error', 'Article non trouvé.');
-        // }
-
+        $articles = Article::findOrFail($id);
         return view('Articles.details', compact('articles'));
     }
-
+    
 
 
  }

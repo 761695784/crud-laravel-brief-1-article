@@ -50,7 +50,7 @@
           </div>
 
           <div class="mb-3">
-            <input type="checkbox" class="form-check-input" name="statut"  value="{{$articles->statut}}">
+            <input type="checkbox" class="form-check-input" name="statut"    {{ $articles->statut ? 'checked' : '' }}>
             <label for="statut" class="form-check-label">A la une</label>
         </div>
 
