@@ -9,7 +9,9 @@ class Article extends Model
 {
     protected $fillable = [
         'ImageArticle',
-        'TitreArtile',
+        'TitreArticle',
         'DescriptionArticle',
+        'PublicationDate',
+        'statut',
     ];
 }

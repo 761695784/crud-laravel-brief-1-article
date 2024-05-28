@@ -39,6 +39,18 @@
             <label for="DescriptionArticle" class="form-label">Description de l'article</label>
             <textarea class="form-control"  name="DescriptionArticle" rows="3" placeholder="Entrez la description de l'article"></textarea>
           </div>
+
+          <div class="mb-3">
+            <label for="PublicationDate" class="form-label">Publié le</label>
+            <input type="date" class="form-control" name="PublicationDate" >
+          </div>
+
+          <div class="mb-3">
+            <input type="checkbox" class="form-check-input" name="statut">
+            <label for="statut" class="form-check-label">A la une</label>
+        </div>
+
+          
           <button type="submit" class="btn btn-primary">Ajouter</button>
           <a href="/liste" class="btn btn-danger">Revenir a la liste des etudiants</a>
         </form>
